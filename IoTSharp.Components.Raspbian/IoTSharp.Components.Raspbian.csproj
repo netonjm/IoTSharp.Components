@@ -56,6 +56,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <Import Project="..\IoTSharp.Components.Core\Xamarin.IoT.Components.Core.projitems" Label="Shared" Condition="Exists('..\IoTSharp.Components.Core\Xamarin.IoT.Components.Core.projitems')" />
+  <Import Project="..\IoTSharp.Components.Core\IoTSharp.Components.Core.projitems" Label="Shared" Condition="Exists('..\IoTSharp.Components.Core\IoTSharp.Components.Core.projitems')" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

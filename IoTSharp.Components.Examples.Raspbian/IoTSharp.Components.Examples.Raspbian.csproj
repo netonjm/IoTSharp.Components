@@ -12,5 +12,5 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\IoTSharp.Components.Raspbian\IoTSharp.Components.Raspbian.csproj" />
 	</ItemGroup>
-	<Import Project="..\IoTSharp.Components.Examples.Core\Xamarin.IoT.Components.Examples.Core.projitems" Label="Shared" Condition="Exists('..\IoTSharp.Components.Examples.Core\Xamarin.IoT.Components.Examples.Core.projitems')" />
+	<Import Project="..\IoTSharp.Components.Examples.Core\IoTSharp.Components.Examples.Core.projitems" Label="Shared" Condition="Exists('..\IoTSharp.Components.Examples.Core\IoTSharp.Components.Examples.Core.projitems')" />
 </Project>

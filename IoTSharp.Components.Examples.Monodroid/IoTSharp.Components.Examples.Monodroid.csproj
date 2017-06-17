@@ -84,6 +84,6 @@
       <Name>IoTSharp.Components.Monodroid</Name>
     </ProjectReference>
   </ItemGroup>
-  <Import Project="..\IoTSharp.Components.Examples.Core\Xamarin.IoT.Components.Examples.Core.projitems" Label="Shared" Condition="Exists('..\IoTSharp.Components.Examples.Core\Xamarin.IoT.Components.Examples.Core.projitems')" />
+  <Import Project="..\IoTSharp.Components.Examples.Core\IoTSharp.Components.Examples.Core.projitems" Label="Shared" Condition="Exists('..\IoTSharp.Components.Examples.Core\IoTSharp.Components.Examples.Core.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
