@@ -13,5 +13,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)ButtonHubTest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)RelayHubTest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SensorHubTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RfHubTest.cs" />
   </ItemGroup>
 </Project>
