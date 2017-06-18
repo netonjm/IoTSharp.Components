@@ -12,7 +12,7 @@ namespace ComponentsExample
 	public class MainActivity : Activity
 	{
 		static readonly ITracer tracer = Tracer.Get<MainActivity> ();
-		RelayTest hubContainer;
+		//RelayTest hubContainer;
 
 		protected async override void OnCreate (Bundle savedInstanceState)
 		{
@@ -21,25 +21,25 @@ namespace ComponentsExample
 			SetContentView (Resource.Layout.SimpleMain);
 
 			//UI Logic
-			ConfigureUI ();
+			//ConfigureUI ();
 
-			Console.WriteLine ("Welcome to Raspberry Extensions tests");
-			var relay = new IoTRelay (Connectors.GPIO17, Connectors.GPIO27);
+			//Console.WriteLine ("Welcome to Raspberry Extensions tests");
+			//var relay = new IoTRelay (Connectors.GPIO17, Connectors.GPIO27);
 
-			hubContainer = new RelayTest ();
-			hubContainer.Step += (sender, step) => {
-				RunOnUiThread (() => lblLog.Text = $"Step {step}");
-			};
-			hubContainer.Finished += delegate {
-				RunOnUiThread (() => lblLog.Text = $"Finished");
-			};
+			//hubContainer = new RelayTest ();
+			//hubContainer.Step += (sender, step) => {
+			//	RunOnUiThread (() => lblLog.Text = $"Step {step}");
+			//};
+			//hubContainer.Finished += delegate {
+			//	RunOnUiThread (() => lblLog.Text = $"Finished");
+			//};
 
-			hubContainer.Configure (relay);
-			try {
-				await hubContainer.StartAsync (loop: true);
-			} catch (Exception ex) {
-				tracer.Error (ex);
-			}
+			//hubContainer.Configure (relay);
+			//try {
+			//	await hubContainer.StartAsync (loop: true);
+			//} catch (Exception ex) {
+			//	tracer.Error (ex);
+			//}
 		}
 
 		#region UI controls
@@ -51,7 +51,7 @@ namespace ComponentsExample
 			lblLog = FindViewById<TextView> (Resource.Id.lblLog);
 			btnNext = FindViewById<Button> (Resource.Id.btnNext);
 			btnNext.Click += delegate {
-				hubContainer.Stop ();
+				//hubContainer.Stop ();
 				StartActivity (typeof (MainSimpleActivity));
 			};
 		}
@@ -60,7 +60,7 @@ namespace ComponentsExample
 
 		protected override void Dispose (bool disposing)
 		{
-			hubContainer.Dispose ();
+			//hubContainer.Dispose ();
 			base.Dispose (disposing);
 		}
 	}
