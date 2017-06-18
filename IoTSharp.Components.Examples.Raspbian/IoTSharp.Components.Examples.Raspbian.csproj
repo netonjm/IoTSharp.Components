@@ -12,5 +12,19 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\IoTSharp.Components.Raspbian\IoTSharp.Components.Raspbian.csproj" />
 	</ItemGroup>
+	<ItemGroup>
+	  <None Update="sound1.wav">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="sound2.wav">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="sound3.wav">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="sound4.wav">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
 	<Import Project="..\IoTSharp.Components.Examples.Core\IoTSharp.Components.Examples.Core.projitems" Label="Shared" Condition="Exists('..\IoTSharp.Components.Examples.Core\IoTSharp.Components.Examples.Core.projitems')" />
 </Project>

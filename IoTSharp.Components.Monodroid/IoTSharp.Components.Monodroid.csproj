@@ -56,6 +56,7 @@
     <Compile Include="ComponentsManager.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="IoTPin.cs" />
+    <Compile Include="IoTSoundPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

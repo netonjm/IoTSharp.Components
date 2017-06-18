@@ -34,6 +34,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)SpinTimer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Components\IIoTRfSample.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Components\IIoTRfTransmitter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IIoTSoundPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Components\" />
