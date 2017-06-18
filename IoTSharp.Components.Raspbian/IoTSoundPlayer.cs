@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 namespace IoTSharp.Components
 {
-	public class IoTSoundPlayer : IIoTSoundPlayer
+	public class IoTSoundPlayer : IoTComponent, IIoTSoundPlayer
 	{
 		public event EventHandler Ended;
 
