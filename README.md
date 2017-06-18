@@ -33,7 +33,7 @@ Or push switch.. it allows you detect realworld clicks. It works really same lik
 ![Button](https://www.boxelectronica.com/334-large_default/push-button-12x12x8mm.jpg) 
 
 *Example Code:
-https://github.com/netonjm/iotsharp-components/blob/master/IoTSharp.Components.Examples.Core/ButtonHubTest.cs*
+https://github.com/netonjm/iotsharp-components/blob/master/IoTSharp.Components.Examples.Core/ButtonTest.cs*
 
 ### Sensor
 
@@ -42,7 +42,7 @@ It's detects a presence in the range of the cell. It raises PresenceStatusChange
 ![Proximity Sensor](https://s-media-cache-ak0.pinimg.com/236x/20/c4/3a/20c43a67d0d3a794f99a1601fe16fbec.jpg)
 
 *Example Code:
-https://github.com/netonjm/iotsharp-components/blob/master/IoTSharp.Components.Examples.Core/SensorHubTest.cs*
+https://github.com/netonjm/iotsharp-components/blob/master/IoTSharp.Components.Examples.Core/SensorTest.cs*
 
 ### Relay
 
@@ -71,7 +71,7 @@ relay.Toggle (1);
 Toggles actual value in module 1 (Connected to Gpio27)
 
 *Example Code:
-https://github.com/netonjm/iotsharp-components/blob/master/IoTSharp.Components.Examples.Core/RelayHubTest.cs*
+https://github.com/netonjm/iotsharp-components/blob/master/IoTSharp.Components.Examples.Core/RelayTest.cs*
 
 ### Blind
 
@@ -80,7 +80,7 @@ This component allows control any kind of motorized projection screen kit, like 
 ![Blind](http://i01.i.aliimg.com/img/pb/743/301/527/527301743_184.jpg) 
 
 *Example Code:
-https://github.com/netonjm/iotsharp-components/blob/master/IoTSharp.Components.Examples.Core/BlindHubTest.cs*
+https://github.com/netonjm/iotsharp-components/blob/master/IoTSharp.Components.Examples.Core/BlindTest.cs*
 
 ### Hub
 
