@@ -40,9 +40,9 @@ namespace ComponentsExample
 				iotRelay.Toggle (0);
 			};
 
-			btnNext.Click += delegate {
-				StartActivity (typeof (MainHubActivity));
-			};
+			//btnNext.Click += delegate {
+			//	StartActivity (typeof (MainHubActivity));
+			//};
 
 			iotRelay.Toggle (0);
 			iotRelay.Toggle (0);

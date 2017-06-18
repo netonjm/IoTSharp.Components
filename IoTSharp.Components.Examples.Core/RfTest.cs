@@ -4,12 +4,12 @@ using IoTSharp.Components;
 
 namespace Xamarin.IoT.Components.Examples
 {
-	public class RfHubTest : IoTHubContainer
+	public class RfTest
 	{
-		public void Configure (IIoTRfTransmitter transmitter, IIoTRfReceiver receiver)
+		public RfTest ()
 		{
-			AddComponent (receiver, transmitter);
-
+			var transmitter = new IoTRfTransmitter(Connectors.GPIO27);
+			var receiver = new IoTRfReceiver(Connectors.GPIO17);
 			var recordTimeMS = 3000;
 			Console.WriteLine ("Recording {0}s. in RfReceiver...", recordTimeMS / 1000);
 			Thread.Sleep (1000);
@@ -18,6 +18,9 @@ namespace Xamarin.IoT.Components.Examples
 			Console.WriteLine ("Transmitting recorded signal...");
 			Thread.Sleep (1000);
 			transmitter.Transmit (receiver.Sample);
+
+			transmitter.Dispose();
+			receiver.Dispose();
 		}
 	}
 }

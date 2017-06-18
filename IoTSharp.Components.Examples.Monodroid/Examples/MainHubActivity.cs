@@ -8,7 +8,7 @@ using IoTSharp.Components.Examples;
 namespace ComponentsExample
 {
 	[Activity (Label = "Components Hub Example", Icon = "@mipmap/icon")]
-	public class MainHubActivity : ActivityHub<ButtonHubTest>
+	public class MainHubActivity : ActivityHub<ButtonTest>
 	{
 		int count = 1;
 

@@ -12,7 +12,7 @@ namespace ComponentsExample
 	public class MainActivity : Activity
 	{
 		static readonly ITracer tracer = Tracer.Get<MainActivity> ();
-		RelayHubTest hubContainer;
+		RelayTest hubContainer;
 
 		protected async override void OnCreate (Bundle savedInstanceState)
 		{
@@ -26,7 +26,7 @@ namespace ComponentsExample
 			Console.WriteLine ("Welcome to Raspberry Extensions tests");
 			var relay = new IoTRelay (Connectors.GPIO17, Connectors.GPIO27);
 
-			hubContainer = new RelayHubTest ();
+			hubContainer = new RelayTest ();
 			hubContainer.Step += (sender, step) => {
 				RunOnUiThread (() => lblLog.Text = $"Step {step}");
 			};
