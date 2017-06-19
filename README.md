@@ -96,12 +96,18 @@ Sends and transmits a loaded byte array data processed.
 
 <img src="https://goo.gl/UBGWB7" height="100">
 
-### Hub
+*Example Code:
+https://github.com/netonjm/iotsharp-components/blob/master/IoTSharp.Components.Examples.Core/RfTest.cs*
 
-- Ok, now I know what is a component.. but then what is a Hub? -
-Have you ever programmed a videogame like #CocosSharp? If yes, you'll surelly you know what is a scene. This is something similat to Hub concept.
+### HubContainer
 
-A Hub is a logical collection of functionality in your application. These means in essence a place where you can drop Components and generate some logic begin the time.
+- Ok, now I know what is a component.. but then what is a HubConainer? -
+
+Have you ever programmed a videogame like #CocosSharp? If yes, you'll surelly you know what is a scene. This is something similat to HubContainer concept.
+
+A HubContainer is a logical collection of functionality in your application. These means in essence a place where you can drop Components and generate some logic begin the time.
+
+This special container manages some logic to dispose all objects included once is disposed and some other interesting features to make your live easily.
 
 ### How works:
 
@@ -122,7 +128,7 @@ All components inherits from IoTComponent and some of them from IoTComponentCont
 This is an example of a simple CustomHub
 
 ```csharp
-	class SensorExampleHub : IoTHub
+	class SensorExampleHub : IoTHubContainer
 	{
 		public override void Init ()
 		{
