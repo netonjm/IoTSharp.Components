@@ -11,7 +11,9 @@ namespace IoTSharp.Components
 		public bool Value {
 			get { return pin.Value; }
 			set {
-				pin.Value = value;
+				if (pin.Value != value) {
+					pin.Value = value;
+				}
 			}
 		}
 

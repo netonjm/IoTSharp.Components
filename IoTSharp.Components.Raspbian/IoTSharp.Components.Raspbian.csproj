@@ -7,7 +7,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>IoTSharp.Components</RootNamespace>
     <AssemblyName>IoTSharp.Components</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <ReleaseVersion>0.35</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -31,18 +31,6 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="Raspberry.IO">
-      <HintPath>..\packages\Raspberry.IO.GeneralPurpose.2.4\lib\net40\Raspberry.IO.dll</HintPath>
-    </Reference>
-    <Reference Include="Raspberry.IO.GeneralPurpose">
-      <HintPath>..\packages\Raspberry.IO.GeneralPurpose.2.4\lib\net40\Raspberry.IO.GeneralPurpose.dll</HintPath>
-    </Reference>
-    <Reference Include="Raspberry.IO.Interop">
-      <HintPath>..\packages\Raspberry.IO.GeneralPurpose.2.4\lib\net40\Raspberry.IO.Interop.dll</HintPath>
-    </Reference>
-    <Reference Include="Raspberry.System">
-      <HintPath>..\packages\Raspberry.System.2.1\lib\net40\Raspberry.System.dll</HintPath>
-    </Reference>
     <Reference Include="System.Diagnostics.Tracer">
       <HintPath>..\packages\System.Diagnostics.Tracer.2.0.8\lib\net45\System.Diagnostics.Tracer.dll</HintPath>
     </Reference>
@@ -56,6 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\external\raspberryio\src\Unosquare.RaspberryIO\Unosquare.RaspberryIO.csproj">
+      <Project>{9E256D0E-A06E-4442-8580-20539E3189EA}</Project>
+      <Name>Unosquare.RaspberryIO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="..\IoTSharp.Components.Core\IoTSharp.Components.Core.projitems" Label="Shared" Condition="Exists('..\IoTSharp.Components.Core\IoTSharp.Components.Core.projitems')" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

@@ -1,24 +1,24 @@
 ﻿using System;
-using Raspberry.IO.GeneralPurpose;
+using Unosquare.RaspberryIO;
+using System.Linq;
+using Unosquare.RaspberryIO.Gpio;
 
 namespace IoTSharp.Components
 {
 	public class IoTPin : IIoTPin
 	{
-		readonly IGpioConnectionDriver driver;
-		readonly ProcessorPin pin;
+		GpioPin pin;
 
 		public bool Value {
-			get { return driver.Read (pin); }
+			get { return pin.Read(); }
 			set {
-				driver.Write (pin, value);
+				pin.Write(value);
 			}
 		}
 
 		public IoTPin (Connectors connector)
 		{
-			driver = GpioConnectionSettings.DefaultDriver;
-			pin = connector.ToProcessor ();
+			pin = connector.Pin();
 		}
 
 		public void SetDirection (IoTPinDirection direction)
@@ -26,10 +26,10 @@ namespace IoTSharp.Components
 			switch (direction) {
 			case IoTPinDirection.DirectionOutInitiallyLow:
 			case IoTPinDirection.DirectionOutInitiallyHight:
-				driver.Allocate (pin, PinDirection.Output);
+					pin.PinMode = GpioPinDriveMode.Output;
 				break;
 			case IoTPinDirection.DirectionIn:
-				driver.Allocate (pin, PinDirection.Input);
+					pin.PinMode = GpioPinDriveMode.Input;
 				break;
 			}
 		}
@@ -41,7 +41,6 @@ namespace IoTSharp.Components
 
 		public void Close ()
 		{
-			driver.Release (pin);
 		}
 
 		public void Dispose ()
