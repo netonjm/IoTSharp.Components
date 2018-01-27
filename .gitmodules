@@ -1,0 +1,3 @@
+[submodule "external/raspberryio"]
+	path = external/raspberryio
+	url = git@github.com:netonjm/raspberryio.git
