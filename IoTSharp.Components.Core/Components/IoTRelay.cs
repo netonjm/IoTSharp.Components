@@ -19,7 +19,6 @@ namespace IoTSharp.Components
 				pins [i] = new IoTPin (gpio [i]);
 				pins [i].SetDirection (IoTPinDirection.DirectionOutInitiallyLow);
 				pins [i].SetActiveType (IoTActiveType.ActiveLow);
-				EnablePin (i, false);
 			}
 		}
 
