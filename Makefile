@@ -12,12 +12,12 @@ configure:
 	echo "Restoring nugets..."
 	mono tools/nuget.exe restore ./IoTSharp.Components.sln
 
-debug: configure
+debug:
 	echo "Building project in debug mode"
 	msbuild /p:Configuration=Debug ./IoTSharp.Components.sln 
 	echo "Finished."
 
-release: configure
+release:
 	echo "Building project in release mode"
 	msbuild /p:Configuration=Release ./IoTSharp.Components.sln 
 	echo "Finished."
