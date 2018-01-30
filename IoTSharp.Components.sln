@@ -9,11 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{1B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoTSharp.Components.Raspbian", "IoTSharp.Components.Raspbian\IoTSharp.Components.Raspbian.csproj", "{CB3DBDBD-76D1-4E10-B721-6BD651129D82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoTSharp.Components.Examples.Monodroid", "IoTSharp.Components.Examples.Monodroid\IoTSharp.Components.Examples.Monodroid.csproj", "{AF0D23C3-9E08-413E-A36D-FE166E61ED63}"
-EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "IoTSharp.Components.Examples.Core", "IoTSharp.Components.Examples.Core\IoTSharp.Components.Examples.Core.shproj", "{0418B13E-F0C4-4005-B7AD-BF48BFCC805C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoTSharp.Components.Monodroid", "IoTSharp.Components.Monodroid\IoTSharp.Components.Monodroid.csproj", "{37EB47E1-B1E7-4332-8AC7-28452E605749}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External", "External", "{567FDB35-C839-47CA-AED8-67C879C82CB1}"
 EndProject
@@ -33,14 +29,6 @@ Global
 		{CB3DBDBD-76D1-4E10-B721-6BD651129D82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB3DBDBD-76D1-4E10-B721-6BD651129D82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CB3DBDBD-76D1-4E10-B721-6BD651129D82}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AF0D23C3-9E08-413E-A36D-FE166E61ED63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AF0D23C3-9E08-413E-A36D-FE166E61ED63}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AF0D23C3-9E08-413E-A36D-FE166E61ED63}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AF0D23C3-9E08-413E-A36D-FE166E61ED63}.Release|Any CPU.Build.0 = Release|Any CPU
-		{37EB47E1-B1E7-4332-8AC7-28452E605749}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{37EB47E1-B1E7-4332-8AC7-28452E605749}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{37EB47E1-B1E7-4332-8AC7-28452E605749}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{37EB47E1-B1E7-4332-8AC7-28452E605749}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9E256D0E-A06E-4442-8580-20539E3189EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9E256D0E-A06E-4442-8580-20539E3189EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E256D0E-A06E-4442-8580-20539E3189EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,7 +39,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6D217664-8A79-470A-A6CB-7853B559B299} = {1B8D3FA4-4DDF-4126-AEB4-FDF67347B6D8}
-		{AF0D23C3-9E08-413E-A36D-FE166E61ED63} = {1B8D3FA4-4DDF-4126-AEB4-FDF67347B6D8}
 		{0418B13E-F0C4-4005-B7AD-BF48BFCC805C} = {1B8D3FA4-4DDF-4126-AEB4-FDF67347B6D8}
 		{9E256D0E-A06E-4442-8580-20539E3189EA} = {567FDB35-C839-47CA-AED8-67C879C82CB1}
 	EndGlobalSection
