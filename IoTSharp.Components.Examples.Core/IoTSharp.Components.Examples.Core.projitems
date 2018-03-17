@@ -14,5 +14,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)RelayTest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SensorTest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)RfTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UltraSonicSensorExample.cs" />
   </ItemGroup>
 </Project>

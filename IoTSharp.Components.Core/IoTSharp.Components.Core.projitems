@@ -35,6 +35,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Components\IIoTRfSample.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Components\IIoTRfTransmitter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IIoTSoundPlayer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Components\IIoTUltraSonicSensor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Components\IoTUltraSonicSensor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Components\" />
