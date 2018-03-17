@@ -16,7 +16,7 @@
   </metadata>
 
   <files>
-    <file src="../../IoTSharp.Components.Raspbian/bin/Debug/*.dll" target="lib/net45" />
+    <file src="../../IoTSharp.Components.Raspbian/bin/Release/*.dll" target="lib/net45" />
   </files>
 
 </package>
