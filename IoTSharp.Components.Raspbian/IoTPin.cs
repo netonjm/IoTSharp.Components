@@ -7,7 +7,7 @@ namespace IoTSharp.Components
 {
 	public class IoTPin : IIoTPin
 	{
-		GpioPin pin;
+		internal GpioPin pin;
 
 		public bool Value {
 			get { return pin.Read(); }
