@@ -9,11 +9,12 @@
     <Import_RootNamespace>IoTSharp.Components.Examples.Core</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)BlindHubExample.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BlindExample.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ButtonExample.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)RelayExample.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ProximitySensorExample.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)RfExample.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UltraSonicSensorExample.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)HubExample.cs" />
   </ItemGroup>
 </Project>

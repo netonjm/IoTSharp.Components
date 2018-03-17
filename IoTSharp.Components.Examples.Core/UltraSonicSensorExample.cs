@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Threading;
-using IoTSharp.Components;
 
-namespace Xamarin.IoT.Components.Examples
+namespace IoTSharp.Components.Examples
 {
-	class UltraSonicSensorExample
+	public class UltraSonicSensorExample
 	{
 		public UltraSonicSensorExample ()
 		{
