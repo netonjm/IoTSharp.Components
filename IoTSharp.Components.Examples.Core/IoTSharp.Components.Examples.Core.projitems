@@ -12,7 +12,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)BlindHubExample.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ButtonExample.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)RelayExample.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)SensorTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProximitySensorExample.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)RfExample.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UltraSonicSensorExample.cs" />
   </ItemGroup>

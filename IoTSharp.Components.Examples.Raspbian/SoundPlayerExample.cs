@@ -4,12 +4,12 @@ using System.Threading;
 
 namespace IoTSharp.Components.Examples
 {
-	public class SoundPlayerTest
+	public class SoundPlayerExample
 	{
 		const int max = 4;
 		int count;
 
-		public SoundPlayerTest()
+		public SoundPlayerExample()
 		{
 			var musicPath = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
 			var button = new IoTButton(Connectors.GPIO27);
