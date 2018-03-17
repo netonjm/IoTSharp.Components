@@ -16,31 +16,32 @@
     <Compile Include="$(MSBuildThisFileDirectory)Components\IoTComponentContainer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Components\IoTHubContainer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Components\IoTBlind.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Components\IIoTBlind.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Components\IIoTButton.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Components\IIoTComponent.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Components\IIoTComponentContainer.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)IIoTPin.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Components\IIoTRelay.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Components\IIoTProximitySensor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Components\IoTRelay.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Components\IoTButton.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Components\IoTProximitySensor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)RelayChangedEventArgs.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Components\IIoTRfReceiver.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Components\IoTRfSample.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Components\IoTRfReceiver.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Components\IoTRfTransmitter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SpinTimer.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Components\IIoTRfSample.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Components\IIoTRfTransmitter.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)IIoTSoundPlayer.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Components\IIoTRotaryEncoder3.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Components\IIoTUltraSonicSensor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Components\IoTUltraSonicSensor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Components\IoTRotaryEncoder3.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IIoTPin.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IIoTSoundPlayer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IIoTBlind.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IIoTButton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IIoTComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IIoTComponentContainer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IIoTProximitySensor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IIoTRelay.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IIoTRfReceiver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IIoTRfSample.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IIoTRfTransmitter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IIoTRotaryEncoder3.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IIoTUltraSonicSensor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Components\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Interfaces\" />
   </ItemGroup>
 </Project>
