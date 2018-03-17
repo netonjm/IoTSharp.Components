@@ -3,7 +3,10 @@ namespace IoTSharp.Components
 {
 	public abstract class IoTComponent : IIoTComponent, IDisposable
 	{
-		public int DefaultInstructionDelayTime { get; set; } = 300;
+		public virtual void Initialize ()
+		{
+			//Needs override
+		}
 
 		public virtual void Update () 
 		{

@@ -8,31 +8,35 @@ namespace IoTSharp.Components
 		const int DefaultLoopTime = 100;
 		bool stopping;
 
-		bool loop;
-		public bool Loop {
-			get { return loop; }
-		}
+		public bool Loop { get; private set; }
 
-		int delayTime;
-		public int DelayTime {
-			get { return delayTime; }
-		}
-
-		public virtual void Init ()
-		{
-			//Needs override
-		}
+		public int DelayTime { get; private set; }
 
 		public void Start (int delayTime = DefaultLoopTime, bool loop = false)
 		{
 			stopping = false;
-			this.loop = loop;
-			this.delayTime = delayTime;
+			Loop = loop;
+			DelayTime = delayTime;
 
+			//Initializes all components
+			OnInitialize ();
+
+			//Loop
 			while (!stopping) {
-				Components.ForEach (s => s.Update ());
+				foreach (var item in Components) {
+					item.Update ();
+				}
 				Update ();
-				Thread.Sleep (DefaultInstructionDelayTime);
+				Thread.Sleep (DelayTime);
+			}
+		}
+
+		protected void OnInitialize ()
+		{
+			Initialize();
+
+			foreach (var item in Components) {
+				item.Initialize();
 			}
 		}
 
@@ -41,11 +45,6 @@ namespace IoTSharp.Components
 			await Task.Run (() => {
 				Start (delayTime, loop);
 			});
-		}
-
-		public void SetDelayTime (int miliseconds) 
-		{
-			delayTime = miliseconds;
 		}
 
 		public void Stop ()

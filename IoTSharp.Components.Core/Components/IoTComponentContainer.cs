@@ -10,7 +10,9 @@ namespace IoTSharp.Components
 
 		public override void Dispose ()
 		{
-			Components.ForEach (c => c.Dispose ());
+			foreach (var item in Components) {
+				item.Dispose ();
+			}
 		}
 
 		public void AddComponent (params IIoTComponent [] control)
@@ -35,7 +37,7 @@ namespace IoTSharp.Components
 				Components.Remove (item);
 			}
 		}
-	
+
 		#region Component Locator
 
 		public IEnumerable<T> GetComponents<T> ()

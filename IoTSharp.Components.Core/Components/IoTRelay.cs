@@ -6,6 +6,7 @@ namespace IoTSharp.Components
 {
 	public class IoTRelay : IoTComponent, IIoTRelay
 	{
+		public int DelayTime { get; set; } = 300;
 		static readonly ITracer tracer = Tracer.Get<IoTRelay> ();
 
 		const string ValueNotInRange = "Pin id parameter is not in range";
@@ -55,7 +56,7 @@ namespace IoTSharp.Components
 				return;
 
 			selectedPin.Value = value;
-			Thread.Sleep (DefaultInstructionDelayTime);
+			Thread.Sleep (DelayTime);
 			OnPinChanged (id, value);
 		}
 
