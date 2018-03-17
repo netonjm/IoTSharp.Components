@@ -3,9 +3,9 @@ using System.Diagnostics;
 
 namespace IoTSharp.Components
 {
-	public class IoTSensor : IoTComponent, IIoTSensor
+	public class IoTProximitySensor : IoTComponent, IIoTProximitySensor
 	{
-		static readonly ITracer tracer = Tracer.Get<IoTSensor> ();
+		static readonly ITracer tracer = Tracer.Get<IoTProximitySensor> ();
 		public event Action<bool> PresenceStatusChanged;
 		readonly IoTPin pin;
 
@@ -13,7 +13,7 @@ namespace IoTSharp.Components
 			get; private set;
 		}
 
-		public IoTSensor (Connectors gpio)
+		public IoTProximitySensor (Connectors gpio)
 		{
 			pin = new IoTPin (gpio);
 			pin.SetDirection (IoTPinDirection.DirectionIn);

@@ -22,10 +22,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Components\IIoTComponentContainer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IIoTPin.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Components\IIoTRelay.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Components\IIoTSensor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Components\IIoTProximitySensor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Components\IoTRelay.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Components\IoTButton.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Components\IoTSensor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Components\IoTProximitySensor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)RelayChangedEventArgs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Components\IIoTRfReceiver.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Components\IoTRfSample.cs" />
