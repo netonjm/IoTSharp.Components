@@ -3,12 +3,12 @@ using System.Threading;
 
 namespace IoTSharp.Components.Examples
 {
-	public class RelayTest
+	public class RelayExample
 	{
 		const int max = 10;
 		int count;
 
-		public RelayTest ()
+		public RelayExample ()
 		{
 			var relay = new IoTRelay(Connectors.GPIO17, Connectors.GPIO27);
 

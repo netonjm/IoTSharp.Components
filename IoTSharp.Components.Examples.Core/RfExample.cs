@@ -4,9 +4,9 @@ using IoTSharp.Components;
 
 namespace Xamarin.IoT.Components.Examples
 {
-	public class RfTest
+	public class RfExample
 	{
-		public RfTest ()
+		public RfExample ()
 		{
 			var transmitter = new IoTRfTransmitter(Connectors.GPIO27);
 			var receiver = new IoTRfReceiver(Connectors.GPIO17);

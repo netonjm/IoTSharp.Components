@@ -3,12 +3,12 @@ using System.Threading;
 
 namespace IoTSharp.Components.Examples
 {
-	class SensorHubTest
+	class ProximitySensorExample
 	{
 		const int max = 2;
 		int count;
 
-		public SensorHubTest ()
+		public ProximitySensorExample ()
 		{
 			var sensor = new IoTSensor(Connectors.GPIO17);
 			sensor.PresenceStatusChanged += (active) => {

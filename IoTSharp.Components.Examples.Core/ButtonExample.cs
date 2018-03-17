@@ -3,12 +3,12 @@ using System.Threading;
 
 namespace IoTSharp.Components.Examples
 {
-	public class ButtonTest
+	public class ButtonExample
 	{
 		const int max = 2;
 		int count;
 
-		public ButtonTest () 
+		public ButtonExample () 
 		{
 			var button = new IoTButton (Connectors.GPIO17);
 			button.Clicked += delegate {
