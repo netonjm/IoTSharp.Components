@@ -2,7 +2,7 @@
 
 namespace IoTSharp.Components
 {
-	public interface IIoTRotaryEncoder3 : IIoTComponent
+	public interface IRotaryEncoder3 : IIoTComponent
 	{
 		long Value { get; }
 	}

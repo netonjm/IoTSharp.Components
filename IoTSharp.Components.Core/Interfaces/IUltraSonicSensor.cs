@@ -1,6 +1,6 @@
 ﻿namespace IoTSharp.Components
 {
-	public interface IIoTUltraSonicSensor : IIoTComponent
+	public interface IUltraSonicSensor : IIoTComponent
 	{
 		double Distance { get; }
 

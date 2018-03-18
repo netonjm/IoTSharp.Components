@@ -10,7 +10,7 @@ namespace IoTSharp.Components.Examples
 
 		public RelayExample ()
 		{
-			var relay = new IoTRelay(Connectors.GPIO17, Connectors.GPIO27);
+			var relay = new Relay(Connectors.GPIO17, Connectors.GPIO27);
 
 			while (count < max) {
 				relay.Toggle(0);
@@ -20,13 +20,13 @@ namespace IoTSharp.Components.Examples
 					relay.EnablePin(1, !pinValue);
 				}
 				
-				relay.Update();
+				relay.OnUpdate();
 
 				Thread.Sleep (500);
 				count++;
 			}
 
-			relay.Dispose();
+			relay.OnDispose();
 		}
 	}
 }

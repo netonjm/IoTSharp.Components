@@ -3,9 +3,9 @@ using System.Diagnostics;
 
 namespace IoTSharp.Components
 {
-	public class IoTProximitySensor : IoTComponent, IIoTProximitySensor
+	public class ProximitySensor : IoTComponent, IProximitySensor
 	{
-		static readonly ITracer tracer = Tracer.Get<IoTProximitySensor> ();
+		static readonly ITracer tracer = Tracer.Get<ProximitySensor> ();
 		public event Action<bool> PresenceStatusChanged;
 		readonly IoTPin pin;
 
@@ -13,7 +13,7 @@ namespace IoTSharp.Components
 			get; private set;
 		}
 
-		public IoTProximitySensor (Connectors gpio)
+		public ProximitySensor (Connectors gpio)
 		{
 			pin = new IoTPin (gpio);
 			pin.SetDirection (IoTPinDirection.DirectionIn);
@@ -22,7 +22,7 @@ namespace IoTSharp.Components
 			tracer.Verbose ("Initial value: " + HasPresence);
 		}
 
-		public override void Update ()
+		public override void OnUpdate ()
 		{
 			var presence = pin.Value;
 			if (presence == HasPresence)
@@ -32,7 +32,7 @@ namespace IoTSharp.Components
 			PresenceStatusChanged?.Invoke (presence);
 		}
 
-		public override void Dispose ()
+		public override void OnDispose ()
 		{
 			pin.Close ();
 		}

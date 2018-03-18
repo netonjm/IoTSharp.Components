@@ -1,6 +1,6 @@
 ﻿namespace IoTSharp.Components
 {
-    public interface IIoTRfSample
+    public interface IRfSample
     {
         int Length { get; }
         double Duration { get; }

@@ -4,16 +4,16 @@ using System.Threading;
 
 namespace IoTSharp.Components
 {
-	public class IoTRelay : IoTComponent, IIoTRelay
+	public class Relay : IoTComponent, IRelay
 	{
 		public int DelayTime { get; set; } = 300;
-		static readonly ITracer tracer = Tracer.Get<IoTRelay> ();
+		static readonly ITracer tracer = Tracer.Get<Relay> ();
 
 		const string ValueNotInRange = "Pin id parameter is not in range";
 		public event EventHandler<RelayChangedEventArgs> PinChanged;
 		readonly IoTPin [] pins;
 
-		public IoTRelay (params Connectors [] gpio)
+		public Relay (params Connectors [] gpio)
 		{
 			pins = new IoTPin [gpio.Length];
 			for (int i = 0; i < gpio.Length; i++) {
@@ -65,7 +65,7 @@ namespace IoTSharp.Components
 			PinChanged?.Invoke(this, new RelayChangedEventArgs (port, value));
 		}
 
-		public override void Dispose ()
+		public override void OnDispose ()
 		{
 			foreach (var pin in pins) {
 				pin.Close ();

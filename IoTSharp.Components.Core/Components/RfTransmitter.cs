@@ -1,11 +1,11 @@
 ﻿namespace IoTSharp.Components
 {
-	public class IoTRfTransmitter : IoTComponent, IIoTRfTransmitter
+	public class RfTransmitter : IoTComponent, IRfTransmitter
 	{
-		public IIoTRfSample Sample { get; set; }
+		public IRfSample Sample { get; set; }
 		readonly IoTPin pin;
 
-		public IoTRfTransmitter (Connectors gpio)
+		public RfTransmitter (Connectors gpio)
 		{
 			pin = new IoTPin (gpio);
 			pin.SetDirection (IoTPinDirection.DirectionOutInitiallyLow);
@@ -14,11 +14,11 @@
 
 		public void Load (string file)
 		{
-			Sample = new IoTRfSample ();
+			Sample = new RfSample ();
 			Sample.Read (file);
 		}
 
-		public void Transmit (IIoTRfSample sample)
+		public void Transmit (IRfSample sample)
 		{
 			Sample = sample;
 			Transmit ();
@@ -34,10 +34,10 @@
 			}
 		}
 
-		public override void Dispose ()
+		public override void OnDispose ()
 		{
 			pin.Close ();
-			base.Dispose ();
+			base.OnDispose ();
 		}
 	}
 }

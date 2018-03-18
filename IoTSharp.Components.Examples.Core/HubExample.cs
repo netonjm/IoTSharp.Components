@@ -16,48 +16,60 @@ namespace IoTSharp.Components.Examples
 	{
 		public HubExample()
 		{
-			var component = new MyCustomComponent ();
+			IIoTHub hub = new MyCustomHub();
 
-			var hub = new MyCustomComponentsHub ();
-			hub.AddComponent (component);
+			hub.Add (new MyCustomComponent("Component1"));
+			hub.Add (new MyCustomComponent("Component2"));
 
 			hub.Start (1000, true);
-			hub.Dispose();
+			hub.OnDispose ();
 		}
 	}
 
 	public class MyCustomComponent : IoTComponent
 	{
-		public override void Initialize()
+		public string Name { get; private set; }
+
+		public MyCustomComponent (string name)
 		{
-			Console.WriteLine("MyCustomComponent: Init");
+			Name = name;
 		}
 
-		public override void Update()
+		public override void OnInitialize()
 		{
-			Console.WriteLine("MyCustomComponent: Update");
+			Console.WriteLine ("{0}: OnInitialize", Name);
+		}
+
+		public override void OnUpdate()
+		{
+			Console.WriteLine ("{0}: OnUpdate", Name);
 		}
 	}
 
-	class MyCustomComponentsHub : IoTHubContainer
+	class MyCustomHub : IoTHub
 	{
 		int counter;
 		const int Max = 10;
+		const string Name = "Hub";
 
-		public override void Initialize ()
+		public override void OnInitialize ()
 		{
+			Console.WriteLine("{0}: OnInitialize", Name);
 			counter = 5;
 		}
 
-		public override void Update ()
+		public override void OnUpdate ()
 		{
+			Console.WriteLine("{0}: OnUpdate", Name);
+
 			if (counter == Max) {
 				Stop ();
-				Console.WriteLine("Finished!");
+				Console.WriteLine("{0}: Finished! {1}/{2}", Name, counter, Max);
 				return;
 			}
-			Console.WriteLine(counter);
+
 			counter++;
+			Console.WriteLine("{0}: Loop {1}/{2}", Name, counter, Max);
 		}
 	}
 }

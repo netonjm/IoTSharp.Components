@@ -2,7 +2,7 @@
 
 namespace IoTSharp.Components
 {
-	public class IoTRotaryEncoder3 : IoTComponent, IIoTRotaryEncoder3
+	public class RotaryEncoder3 : IoTComponent, IRotaryEncoder3
 	{
 		public long value;
 		public int lastEncoded;
@@ -12,7 +12,7 @@ namespace IoTSharp.Components
 
 		public long Value { get; private set; }
 
-		public IoTRotaryEncoder3 (Connectors pinA, Connectors pinB)
+		public RotaryEncoder3 (Connectors pinA, Connectors pinB)
 		{
 			this.pinA = new IoTPin (pinA);
 			this.pinA.SetDirection (IoTPinDirection.DirectionIn);
@@ -23,7 +23,7 @@ namespace IoTSharp.Components
 			this.pinB.SetActiveType (IoTActiveType.ActiveHigh);
 		}
 
-		public override void Update ()
+		public override void OnUpdate ()
 		{
 			int MSB = Convert.ToInt32 (pinA.Value);
 			int LSB = Convert.ToInt32 (pinB.Value);
@@ -36,11 +36,11 @@ namespace IoTSharp.Components
 			lastEncoded = encoded;
 		}
 
-		public override void Dispose ()
+		public override void OnDispose ()
 		{
 			pinA.Dispose ();
 			pinB.Dispose ();
-			base.Dispose ();
+			base.OnDispose ();
 		}
 	}
 }

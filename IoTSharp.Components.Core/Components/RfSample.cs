@@ -3,16 +3,16 @@ using System.Linq;
 
 namespace IoTSharp.Components
 {
-	public class IoTRfSample : IIoTRfSample
+	public class RfSample : IRfSample
 	{
 		double [] switchTimes;
 
-		public IoTRfSample (double [] values) : this ()
+		public RfSample (double [] values) : this ()
 		{
 			this.switchTimes = values;
 		}
 
-		public IoTRfSample ()
+		public RfSample ()
 		{
 		}
 

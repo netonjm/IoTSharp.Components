@@ -2,7 +2,7 @@
 
 namespace IoTSharp.Components
 {
-	public interface IIoTRelay : IIoTComponent
+	public interface IRelay : IIoTComponent
 	{
 		event EventHandler<RelayChangedEventArgs> PinChanged;
 

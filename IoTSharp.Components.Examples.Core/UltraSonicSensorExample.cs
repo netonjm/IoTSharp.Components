@@ -7,7 +7,7 @@ namespace IoTSharp.Components.Examples
 	{
 		public UltraSonicSensorExample ()
 		{
-			IIoTUltraSonicSensor encoder = new IoTUltraSonicSensor (Connectors.GPIO23, Connectors.GPIO24);
+			IUltraSonicSensor encoder = new UltraSonicSensor (Connectors.GPIO23, Connectors.GPIO24);
 			encoder.Start ();
 
 			while (true) {

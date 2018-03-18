@@ -8,8 +8,8 @@ namespace Xamarin.IoT.Components.Examples
 	{
 		public RfExample ()
 		{
-			var transmitter = new IoTRfTransmitter(Connectors.GPIO27);
-			var receiver = new IoTRfReceiver(Connectors.GPIO17);
+			var transmitter = new RfTransmitter(Connectors.GPIO27);
+			var receiver = new RfReceiver(Connectors.GPIO17);
 			var recordTimeMS = 3000;
 			Console.WriteLine ("Recording {0}s. in RfReceiver...", recordTimeMS / 1000);
 			Thread.Sleep (1000);
@@ -19,8 +19,8 @@ namespace Xamarin.IoT.Components.Examples
 			Thread.Sleep (1000);
 			transmitter.Transmit (receiver.Sample);
 
-			transmitter.Dispose();
-			receiver.Dispose();
+			transmitter.OnDispose();
+			receiver.OnDispose();
 		}
 	}
 }

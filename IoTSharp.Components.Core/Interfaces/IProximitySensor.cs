@@ -2,7 +2,7 @@
 
 namespace IoTSharp.Components
 {
-	public interface IIoTProximitySensor : IIoTComponent
+	public interface IProximitySensor : IIoTComponent
 	{
 		event Action<bool> PresenceStatusChanged;
 		bool HasPresence { get; }

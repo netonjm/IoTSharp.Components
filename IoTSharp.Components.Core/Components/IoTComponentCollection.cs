@@ -4,18 +4,11 @@ using System.Linq;
 
 namespace IoTSharp.Components
 {
-	public abstract class IoTComponentContainer : IoTComponent, IIoTComponentContainer, IDisposable
+	public abstract class IoTComponentCollection : IoTComponent, IIoTComponentCollection, IDisposable
 	{
 		public List<IIoTComponent> Components { get; set; } = new List<IIoTComponent> ();
 
-		public override void Dispose ()
-		{
-			foreach (var item in Components) {
-				item.Dispose ();
-			}
-		}
-
-		public void AddComponent (params IIoTComponent [] control)
+		public void Add (params IIoTComponent [] control)
 		{
 			foreach (var item in control) {
 				if (!Components.Exists (s => s == item)) {
@@ -24,7 +17,7 @@ namespace IoTSharp.Components
 			}
 		}
 
-		public void RemoveComponent (params IIoTComponent [] control)
+		public void Remove (params IIoTComponent [] control)
 		{
 			var toRemove = new List<IIoTComponent> ();
 			foreach (var item in control) {
@@ -55,5 +48,13 @@ namespace IoTSharp.Components
 		}
 
 		#endregion
+
+		public override void OnDispose()
+		{
+			foreach (var item in Components)
+			{
+				item.OnDispose();
+			}
+		}
 	}
 }

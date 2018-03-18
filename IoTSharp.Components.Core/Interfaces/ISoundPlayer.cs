@@ -2,7 +2,7 @@
 
 namespace IoTSharp.Components
 {
-	public interface IIoTSoundPlayer : IIoTComponent
+	public interface ISoundPlayer : IIoTComponent
 	{
 		event EventHandler Ended;
 		void Play (string file);

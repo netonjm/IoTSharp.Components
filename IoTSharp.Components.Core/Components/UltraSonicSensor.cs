@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace IoTSharp.Components
 {
-	public class IoTUltraSonicSensor : IoTComponent, IIoTUltraSonicSensor
+	public class UltraSonicSensor : IoTComponent, IUltraSonicSensor
 	{
 		const double SpeedOfSoundCmPerSecond = 34300;
 		readonly IoTPin trigger;
@@ -15,7 +15,7 @@ namespace IoTSharp.Components
 		CancellationTokenSource cancellationToken;
 		TaskCompletionSource<object> processingCompletion;
 
-		public IoTUltraSonicSensor (Connectors triggerPin, Connectors echoPin)
+		public UltraSonicSensor (Connectors triggerPin, Connectors echoPin)
 		{
 			trigger = new IoTPin (triggerPin);
 			trigger.SetDirection (IoTPinDirection.DirectionOutInitiallyLow);
@@ -66,11 +66,11 @@ namespace IoTSharp.Components
 			processingCompletion?.Task.Wait ();
 		}
 
-		public override void Dispose ()
+		public override void OnDispose ()
 		{
 			trigger.Dispose ();
 			echo.Dispose ();
-			base.Dispose ();
+			base.OnDispose ();
 		}
 	}
 }
