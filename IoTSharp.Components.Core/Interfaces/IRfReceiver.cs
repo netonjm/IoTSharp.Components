@@ -1,9 +1,9 @@
 ﻿using System;
 namespace IoTSharp.Components
 {
-	public interface IIoTRfReceiver : IIoTComponent
+	public interface IRfReceiver : IIoTComponent
 	{
-		IIoTRfSample Sample { get; }
+		IRfSample Sample { get; }
 		void Record (double recTime);
 	}
 }

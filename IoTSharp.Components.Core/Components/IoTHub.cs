@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace IoTSharp.Components
 {
-	public abstract class IoTHubContainer : IoTComponentContainer, IIoTComponentContainer 
+	public class IoTHub : IoTComponentCollection , IIoTHub
 	{
 		const int DefaultLoopTime = 100;
 		bool stopping;
@@ -18,36 +18,27 @@ namespace IoTSharp.Components
 			Loop = loop;
 			DelayTime = delayTime;
 
-			//Initializes all components
+			foreach (var item in Components) {
+				item.OnInitialize ();
+			}
 			OnInitialize ();
 
 			//Loop
 			while (!stopping) {
 				foreach (var item in Components) {
-					item.Update ();
+					item.OnUpdate ();
 				}
-				Update ();
-				Thread.Sleep (DelayTime);
-			}
-		}
-
-		protected void OnInitialize ()
-		{
-			Initialize();
-
-			foreach (var item in Components) {
-				item.Initialize();
+				OnUpdate ();
+				Thread.Sleep(DelayTime);
 			}
 		}
 
 		public async Task StartAsync (int delayTime = DefaultLoopTime, bool loop = false)
 		{
-			await Task.Run (() => {
-				Start (delayTime, loop);
-			});
+			await Task.Run(() => Start(delayTime, loop));
 		}
 
-		public void Stop ()
+		public void Stop()
 		{
 			stopping = true;
 		}

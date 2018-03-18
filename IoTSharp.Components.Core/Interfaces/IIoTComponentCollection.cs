@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace IoTSharp.Components
 {
-	public interface IIoTComponentContainer : IIoTComponent, IDisposable
+	public interface IIoTComponentCollection : IIoTComponent, IDisposable
 	{
 		List<IIoTComponent> Components { get; set; }
-		void AddComponent (params IIoTComponent [] control);
+		void Add (params IIoTComponent [] control);
 	}
 }

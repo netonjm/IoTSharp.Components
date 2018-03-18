@@ -1,23 +1,23 @@
 ﻿
 namespace IoTSharp.Components
 {
-	public class IoTBlind : IoTComponentContainer, IIoTBlind
+	public class Blind : IoTComponentCollection, IBlind
 	{
-		public IIoTRelay Relay { get; set; }
+		public IRelay Relay { get; set; }
 		public int RelayPortUp { get; set; }
 		public int RelayPortDown { get; set; }
 
-		public IoTBlind (IIoTRelay contentRelay, int relayPortUp, int relayPortDown)
+		public Blind (IRelay contentRelay, int relayPortUp, int relayPortDown)
 		{
 			Relay = contentRelay;
-			AddComponent (Relay);
+			Add (Relay);
 			RelayPortUp = relayPortUp; RelayPortDown = relayPortDown;
 		}
 
-		public IoTBlind (Connectors gpioUp, Connectors gpioDown)
+		public Blind (Connectors gpioUp, Connectors gpioDown)
 		{
-			Relay = new IoTRelay (gpioUp, gpioDown);
-			AddComponent (Relay);
+			Relay = new Relay (gpioUp, gpioDown);
+			Add (Relay);
 			RelayPortUp = 0; RelayPortDown = 1;
 		}
 
@@ -39,10 +39,10 @@ namespace IoTSharp.Components
 			Relay.EnablePin (RelayPortDown, false);
 		}
 
-		public override void Dispose ()
+		public override void OnDispose ()
 		{
 			Relay.Dispose ();
-			base.Dispose ();
+			base.OnDispose ();
 		}
 	}
 }

@@ -18,8 +18,8 @@ namespace IoTSharp.Components.Examples.Raspbian
 			//var example = new RfExample ();
 			//var example = new RelayExample ();
 			//var example = new ProximitySensorExample ();
-			var example = new UltraSonicSensorExample ();
-			//var example = new HubExample ();
+			//var example = new UltraSonicSensorExample ();
+			var example = new HubExample ();
 
 			Console.WriteLine ("Finished execution.");
 		}

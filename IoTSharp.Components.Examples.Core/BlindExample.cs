@@ -6,7 +6,7 @@ namespace IoTSharp.Components.Examples
 	{
 		public BlindExample () 
 		{
-			var blind = new IoTBlind(Connectors.GPIO17, Connectors.GPIO17);
+			var blind = new Blind(Connectors.GPIO17, Connectors.GPIO17);
 			Console.WriteLine ("Blind is closing..");
 			blind.Down ();
 
@@ -16,7 +16,7 @@ namespace IoTSharp.Components.Examples
 			blind.Stop ();
 			Console.WriteLine ("Blind stop.");
 
-			blind.Dispose ();
+			blind.OnDispose ();
 		}
 	}
 }

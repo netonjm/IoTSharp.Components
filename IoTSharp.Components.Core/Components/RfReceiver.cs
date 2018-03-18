@@ -4,12 +4,12 @@ using System.Diagnostics;
 
 namespace IoTSharp.Components
 {
-	public class IoTRfReceiver : IoTComponent, IIoTRfReceiver
+	public class RfReceiver : IoTComponent, IRfReceiver
 	{
-		public IIoTRfSample Sample { get; private set; }
+		public IRfSample Sample { get; private set; }
 		readonly IoTPin pin;
 
-		public IoTRfReceiver (Connectors gpio)
+		public RfReceiver (Connectors gpio)
 		{
 			pin = new IoTPin (gpio);
 			pin.SetDirection (IoTPinDirection.DirectionIn);
@@ -50,13 +50,13 @@ namespace IoTSharp.Components
 				Console.WriteLine (ex);
 			}
 
-			Sample = new IoTRfSample (switchTimes.ToArray ());
+			Sample = new RfSample (switchTimes.ToArray ());
 		}
 
-		public override void Dispose ()
+		public override void OnDispose ()
 		{
 			pin.Close ();
-			base.Dispose ();
+			base.OnDispose ();
 		}
 	}
 }

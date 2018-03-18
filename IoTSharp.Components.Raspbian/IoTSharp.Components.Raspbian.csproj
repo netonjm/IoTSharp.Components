@@ -40,7 +40,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="IoTPin.cs" />
-    <Compile Include="IoTSoundPlayer.cs" />
+    <Compile Include="SoundPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

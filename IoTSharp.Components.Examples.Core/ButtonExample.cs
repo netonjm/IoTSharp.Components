@@ -10,15 +10,14 @@ namespace IoTSharp.Components.Examples
 
 		public ButtonExample () 
 		{
-			var button = new IoTButton (Connectors.GPIO17);
+			var button = new Button (Connectors.GPIO17);
 			button.Clicked += delegate {
 				count++;
 				Console.WriteLine("You clicked the button! {0}/{1}", count, max);
 			};
 
-			while (count < max)
-			{
-				button.Update ();
+			while (count < max) {
+				button.OnUpdate ();
 				Thread.Sleep (250);
 			}
 

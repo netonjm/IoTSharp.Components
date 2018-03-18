@@ -3,9 +3,9 @@ using System.Diagnostics;
 
 namespace IoTSharp.Components
 {
-	public  class IoTButton : IoTComponent, IIoTButton
+	public class Button : IoTComponent, IButton
 	{
-		static readonly ITracer tracer = Tracer.Get<IoTButton> ();
+		static readonly ITracer tracer = Tracer.Get<Button> ();
 
 		public event Action ButtonDown;
 		public event Action ButtonUp;
@@ -14,7 +14,7 @@ namespace IoTSharp.Components
 		public bool IsPressed { get; private set; }
 		readonly IoTPin pin;
 
-		public IoTButton (Connectors gpio)
+		public Button (Connectors gpio)
 		{
 			pin = new IoTPin (gpio);
 			pin.SetDirection (IoTPinDirection.DirectionIn);
@@ -23,7 +23,7 @@ namespace IoTSharp.Components
 			tracer.Verbose ("Initial value: " + IsPressed);
 		}
 
-		public override void Update ()
+		public override void OnUpdate ()
 		{
 			var value = !pin.Value ;
 			if (IsPressed == value)
@@ -39,7 +39,7 @@ namespace IoTSharp.Components
 			}
 		}
 
-		public override void Dispose ()
+		public override void OnDispose ()
 		{
 			pin.Close ();
 		}

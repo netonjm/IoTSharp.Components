@@ -10,18 +10,17 @@ namespace IoTSharp.Components.Examples
 
 		public ProximitySensorExample ()
 		{
-			var sensor = new IoTProximitySensor (Connectors.GPIO17);
+			var sensor = new ProximitySensor (Connectors.GPIO17);
 			sensor.PresenceStatusChanged += (active) => {
 				count++;
 				Console.WriteLine($"PresenceStatusChanged {3}. {0}/{1}", count, max, active);
 			};
 
 			while (count < max) {
-				sensor.Update();
+				sensor.OnUpdate();
 				Thread.Sleep(250);
-
 			}
-			sensor.Dispose ();
+			sensor.OnDispose ();
 		}
 	}
 }

@@ -3,8 +3,10 @@ namespace IoTSharp.Components
 {
 	public interface IIoTComponent : IDisposable
 	{
-		void Update ();
+		void OnUpdate ();
 
-		void Initialize ();
+		void OnInitialize ();
+
+		void OnDispose ();
 	}
 }

@@ -2,7 +2,7 @@
 
 namespace IoTSharp.Components
 {
-	public interface IIoTButton : IIoTComponent
+	public interface IButton : IIoTComponent
 	{
 		event Action ButtonDown;
 		event Action ButtonUp;

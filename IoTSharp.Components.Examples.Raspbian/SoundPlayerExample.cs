@@ -12,8 +12,8 @@ namespace IoTSharp.Components.Examples
 		public SoundPlayerExample()
 		{
 			var musicPath = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-			var button = new IoTButton(Connectors.GPIO27);
-			var soundPlayer = new IoTSoundPlayer ();
+			var button = new Button(Connectors.GPIO27);
+			var soundPlayer = new SoundPlayer ();
 
 			button.Clicked += delegate {
 				count++;
@@ -21,11 +21,11 @@ namespace IoTSharp.Components.Examples
 			};
 
 			while (count < max) {
-				button.Update();
+				button.OnUpdate();
 				Thread.Sleep(250);
 			}
 
-			button.Dispose();
+			button.OnDispose();
 		}
 	}
 }
