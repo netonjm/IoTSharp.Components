@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace IoTSharp.Components
 {
-	public class IoTHub : IoTComponentCollection , IIoTHub
+	public class IoTHub : IoTComponent , IIoTHub
 	{
 		const int DefaultLoopTime = 100;
 		bool stopping;

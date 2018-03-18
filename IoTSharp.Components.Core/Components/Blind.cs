@@ -1,7 +1,7 @@
 ﻿
 namespace IoTSharp.Components
 {
-	public class Blind : IoTComponentCollection, IBlind
+	public class Blind : IoTComponent, IBlind
 	{
 		public IRelay Relay { get; set; }
 		public int RelayPortUp { get; set; }

@@ -2,7 +2,7 @@
 
 namespace IoTSharp.Components
 {
-	public interface IIoTHub : IIoTComponentCollection
+	public interface IIoTHub : IIoTComponent
 	{
 		bool Loop { get; }
 		int DelayTime { get; }

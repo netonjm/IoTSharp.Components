@@ -1,6 +1,6 @@
 ﻿namespace IoTSharp.Components
 {
-	public interface IBlind : IIoTComponentCollection
+	public interface IBlind : IIoTComponent
 	{
 		void Up ();
 		void Down ();

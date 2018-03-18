@@ -13,7 +13,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)IoTActiveType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IoTPinDirection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Components\IoTComponent.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Components\IoTComponentCollection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Components\Blind.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Components\Relay.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Components\Button.cs" />
@@ -30,7 +29,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IBlind.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IButton.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IIoTComponent.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IIoTComponentCollection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IProximitySensor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IRelay.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IRfReceiver.cs" />
