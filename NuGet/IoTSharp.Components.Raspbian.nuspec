@@ -3,7 +3,7 @@
   <metadata>
     <id>IoTSharp.Components.Raspbian</id>
     <title>IoTSharp.Components</title>
-    <version>0.4.2</version>
+    <version>0.5.0</version>
     <authors>Jose Medrano</authors>
     <licenseUrl>https://www.microsoft.com/es-es/</licenseUrl>
     <projectUrl>https://www.microsoft.com/es-es/</projectUrl>
@@ -16,7 +16,7 @@
   </metadata>
 
   <files>
-    <file src="../../IoTSharp.Components.Raspbian/bin/Release/*.dll" target="lib/net45" />
+    <file src="..\IoTSharp.Components.Raspbian\bin\Release\*.dll" target="lib/net45" />
   </files>
 
 </package>

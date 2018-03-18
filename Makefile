@@ -25,8 +25,8 @@ release:
 package: 
 	msbuild /p:Configuration=Package ./IoTSharp.Components.sln 
 	echo "Generating package addin..."
-	mono tools/nuget.exe pack templates/nuget/IoTSharp.Components.Monodroid.nuspec -outputdirectory templates/nuget/packages/
-	#mono tools/nuget.exe pack templates/nuget/IoTSharp.Components.Raspbian.nuspec -outputdirectory templates/nuget/packages/
+	#mono tools/nuget.exe pack NuGet/IoTSharp.Components.Monodroid.nuspec -outputdirectory NuGet/packages/
+	mono tools/nuget.exe pack NuGet/IoTSharp.Components.Raspbian.nuspec -outputdirectory NuGet/packages/
 
 clean:
 	msbuild ./IoTSharp.Components.sln /t:Clean
