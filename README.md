@@ -124,7 +124,7 @@ A total of 8 components are currently available, in addition to the IoT special 
   - [RfReceiver](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/RfReceiver.cs)
   - [RfTransmitter](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/RfTransmitter.cs)
   - [RotatoryEncoder3](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/RotaryEncoder3.cs)
-  - [UltraSonicSensor](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/UltraSonicSensor.cs)
+  - [UltraSonicSensor](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/UltraSonicSensor.cs)
   - [SoundPlayer](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Raspbian/SoundPlayer.cs)
   - **[IoTHub](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/IoTHub.cs)**
 
