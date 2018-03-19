@@ -136,7 +136,7 @@ It raises some actions (Down/Up/Clicked) also stores his current state
 <img src="https://www.boxelectronica.com/334-large_default/push-button-12x12x8mm.jpg" height="100">
 
 *Example Code:
-https://github.com/netonjm/iotsharp-components/blob/master/IoTSharp.Components.Examples.Core/ButtonTest.cs*
+https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Examples.Core/ButtonExample.cs*
 
 ### Proximity Sensor
 
@@ -145,7 +145,7 @@ This sensor detects the presence in the range of the cell, then it raises a Pres
 <img src="https://s-media-cache-ak0.pinimg.com/236x/20/c4/3a/20c43a67d0d3a794f99a1601fe16fbec.jpg" height="100">
 
 *Example Code:
-https://github.com/netonjm/iotsharp-components/blob/master/IoTSharp.Components.Examples.Core/SensorTest.cs*
+https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Examples.Core/ProximitySensorExample.cs*
 
 ### Relay
 
@@ -174,7 +174,7 @@ relay.Toggle (1);
 Toggles actual value in module 1 (Connected to Gpio27)
 
 *Example Code:
-https://github.com/netonjm/iotsharp-components/blob/master/IoTSharp.Components.Examples.Core/RelayTest.cs*
+https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Examples.Core/RelayExample.cs*
 
 ### Blind
 
@@ -183,7 +183,7 @@ This component allows control any kind of motorized projection screen kit, like 
 <img src="http://i01.i.aliimg.com/img/pb/743/301/527/527301743_184.jpg" height="300" />
 
 *Example Code:
-https://github.com/netonjm/iotsharp-components/blob/master/IoTSharp.Components.Examples.Core/BlindTest.cs*
+https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Examples.Core/BlindExample.cs*
 
 ### RfReceiver
 
@@ -197,10 +197,26 @@ This module listen for this signals and stores in a byte array all data, which c
 
 Sends and transmits a loaded byte array data processed.
 
-<img src="https://goo.gl/UBGWB7" height="100">
+<img src="https://goo.gl/UBGWB7" height="100" />
 
 *Example Code:
-https://github.com/netonjm/iotsharp-components/blob/master/IoTSharp.Components.Examples.Core/RfTest.cs*
+https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Examples.Core/RfExample.cs*
+
+
+### UltraSonicSensor
+
+An Ultrasonic sensor is a device that can measure the distance to an object by using sound waves. It measures distance by sending out a sound wave at a specific frequency and listening for that sound wave to bounce back. By recording the elapsed time between the sound wave being generated and the sound wave bouncing back, it is possible to calculate the distance between the sonar sensor and the object.
+
+<img src="https://www.makerlab-electronics.com/my_uploads/2016/05/ultrasonic-sensor-HCSR04-1.jpg" height="100">
+
+*Example Code:
+https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Examples.Core/UltraSonicSensorExample.cs*
+
+### RotatoryEncoder3
+
+A rotary encoder, also called a shaft encoder, is an electro-mechanical device that converts the angular position or motion of a shaft or axle to an analog or digital signal.
+
+<img src="https://pandaelectronicsbd.com/wp-content/uploads/2017/07/sku_310402_2.jpg" height="100">
 
 
 ## Improving the current API
