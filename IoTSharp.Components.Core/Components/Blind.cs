@@ -10,14 +10,14 @@ namespace IoTSharp.Components
 		public Blind (IRelay contentRelay, int relayPortUp, int relayPortDown)
 		{
 			Relay = contentRelay;
-			Add (Relay);
+			AddComponent (Relay);
 			RelayPortUp = relayPortUp; RelayPortDown = relayPortDown;
 		}
 
 		public Blind (Connectors gpioUp, Connectors gpioDown)
 		{
 			Relay = new Relay (gpioUp, gpioDown);
-			Add (Relay);
+			AddComponent (Relay);
 			RelayPortUp = 0; RelayPortDown = 1;
 		}
 

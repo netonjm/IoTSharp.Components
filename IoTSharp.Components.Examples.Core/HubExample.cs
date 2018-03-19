@@ -17,10 +17,6 @@ namespace IoTSharp.Components.Examples
 		public HubExample()
 		{
 			IIoTHub hub = new MyCustomHub();
-
-			hub.Add (new MyCustomComponent("Component1"));
-			hub.Add (new MyCustomComponent("Component2"));
-
 			hub.Start (1000, true);
 			hub.OnDispose ();
 		}
@@ -51,6 +47,12 @@ namespace IoTSharp.Components.Examples
 		int counter;
 		const int Max = 10;
 		const string Name = "Hub";
+
+		public MyCustomHub ()
+		{
+			AddComponent (new MyCustomComponent("Component1"));
+			AddComponent (new MyCustomComponent("Component2"));
+		}
 
 		public override void OnInitialize ()
 		{

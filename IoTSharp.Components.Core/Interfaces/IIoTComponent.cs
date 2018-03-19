@@ -12,6 +12,7 @@ namespace IoTSharp.Components
 		void OnDispose ();
 
 		List<IIoTComponent> Components { get; }
-		void Add(params IIoTComponent[] control);
+		void AddComponent (params IIoTComponent[] control);
+		void RemoveComponent (params IIoTComponent[] control);
 	}
 }

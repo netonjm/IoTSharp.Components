@@ -18,7 +18,7 @@ namespace IoTSharp.Components
 			//all components can handle a update logic
 		}
 
-		public void Add(params IIoTComponent[] control)
+		public void AddComponent(params IIoTComponent[] control)
 		{
 			foreach (var item in control)
 			{
@@ -29,7 +29,7 @@ namespace IoTSharp.Components
 			}
 		}
 
-		public void Remove(params IIoTComponent[] control)
+		public void RemoveComponent (params IIoTComponent[] control)
 		{
 			var toRemove = new List<IIoTComponent>();
 			foreach (var item in control)
