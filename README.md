@@ -16,8 +16,8 @@ Nowadays there are many distributions available to download, but focusing in .Ne
 
 | OS                          | Runtime                   | Backend                |
 | --------------------------- | ------------------------- | ---------------------- |
-| Raspbian (Basada en Debian) | Mono/.Net Core            | Raspbery.IO            |
-| AndroidThings               | Mono                      | Xamarin.Android.Things |
+| Raspbian (Basada en Debian) | Mono/.Net Core            | [Raspbery.IO](https://unosquare.github.io/raspberryio/)            |
+| AndroidThings               | Mono                      | [Xamarin.Android.Things](https://developer.android.com/things/index.html) |
 | Windows 10 IoT              | Net Framework / .Net Core | Not implemented        |
 | Ubuntu Mate                 | Mono/.Net Core            | Not implemented        |
 
@@ -117,16 +117,16 @@ public class Program
 
 A total of 8 components are currently available, in addition to the IoT special base classes (marked in bold that we will explain later).
 
-- **IoTComponent**
-  - Button
-  - ProximitySensor
-  - Relay
-  - RfReceiver
-  - RfTransmitter
-  - RotatoryEncoder3
-  - UltraSonicSensor
-  - SoundPlayer
-  - **IoTHub**
+- **[IoTComponent](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/IoTComponent.cs)**
+  - [Button](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/Button.cs)
+  - [ProximitySensor](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/ProximitySensor.cs)
+  - [Relay](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/Relay.cs)
+  - [RfReceiver](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/RfReceiver.cs)
+  - [RfTransmitter](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/RfTransmitter.cs)
+  - [RotatoryEncoder3](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/RotaryEncoder3.cs)
+  - [UltraSonicSensor](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/UltraSonicSensor.cs)
+  - [SoundPlayer](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Raspbian/SoundPlayer.cs)
+  - **[IoTHub](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/IoTHub.cs)**
 
 ### Button
 
@@ -138,6 +138,9 @@ It raises some actions (Down/Up/Clicked) also stores his current state
 *Example Code:
 https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Examples.Core/ButtonExample.cs*
 
+
+[Schematic](https://github.com/netonjm/IoTSharp.Components/raw/master/images/setup-button.png)
+
 ### Proximity Sensor
 
 This sensor detects the presence in the range of the cell, then it raises a PresenceStatusChanged event.
@@ -146,6 +149,8 @@ This sensor detects the presence in the range of the cell, then it raises a Pres
 
 *Example Code:
 https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Examples.Core/ProximitySensorExample.cs*
+
+[Schematic](https://github.com/netonjm/IoTSharp.Components/raw/master/images/setup-button.png)
 
 ### Relay
 
@@ -176,6 +181,8 @@ Toggles actual value in module 1 (Connected to Gpio27)
 *Example Code:
 https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Examples.Core/RelayExample.cs*
 
+[Schematic](https://github.com/netonjm/IoTSharp.Components/raw/master/images/setup-relay1.png)
+
 ### Blind
 
 This component allows control any kind of motorized projection screen kit, like a custom window blind (or projector screen) with 2 Phases (Up, Down) and neutral wire.
@@ -185,6 +192,9 @@ This component allows control any kind of motorized projection screen kit, like 
 *Example Code:
 https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Examples.Core/BlindExample.cs*
 
+
+[Schematic](https://github.com/netonjm/IoTSharp.Components/raw/master/images/setup-relay2.png)
+
 ### RfReceiver
 
 RF Module is a cheap wireless communication module for low cost application. RF Module comprises of a transmitter and a receiver that operate at a radio frequency range. Usually, the frequency at which these modules communicate will be 315 MHz or 433 MHz.
@@ -192,6 +202,9 @@ RF Module is a cheap wireless communication module for low cost application. RF 
 This module listen for this signals and stores in a byte array all data, which can be stored in a file or processed by a Transmitter generating a RfSample.  
 
 <img src="https://goo.gl/c6S2B8" height="100">
+
+
+[Schematic](https://github.com/netonjm/IoTSharp.Components/raw/master/images/setup-rf.png)
 
 ### RfTransmitter
 
@@ -211,6 +224,8 @@ An Ultrasonic sensor is a device that can measure the distance to an object by u
 
 *Example Code:
 https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Examples.Core/UltraSonicSensorExample.cs*
+
+[Schematic](https://github.com/netonjm/IoTSharp.Components/raw/master/images/setup-ultrasoundsensor.png)
 
 ### RotatoryEncoder3
 
