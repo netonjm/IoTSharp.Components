@@ -2,7 +2,7 @@
 
 Using an abstraction library to access IoT Components in your Raspberry using Raspbian/AndroidThings.
 
-Chat with us in:
+## Status:
 
 | Gitter Chat 
 |---|
