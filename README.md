@@ -303,5 +303,7 @@ public class Program
 
 And that's it!
 
+## Other interesting projects related:
 
-
+**HapSharp:** https://github.com/netonjm/HapSharp
+Using the .NET Bridge Accessory Server for HomeKit to control your home appliances and IOT devices.
