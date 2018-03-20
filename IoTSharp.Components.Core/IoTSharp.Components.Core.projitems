@@ -38,6 +38,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IUltraSonicSensor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Components\IoTHub.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IIoTHub.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IDhtSensor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Components\" />

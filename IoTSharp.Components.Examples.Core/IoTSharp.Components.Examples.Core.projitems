@@ -16,5 +16,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)RfExample.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UltraSonicSensorExample.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)HubExample.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DhtSensorExample.cs" />
   </ItemGroup>
 </Project>

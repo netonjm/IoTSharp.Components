@@ -41,6 +41,10 @@
     <Compile Include="Extensions.cs" />
     <Compile Include="IoTPin.cs" />
     <Compile Include="SoundPlayer.cs" />
+    <Compile Include="DhtSensor.cs" />
+    <Compile Include="EmbeddedResources.cs" />
+    <Compile Include="Native\Standard.cs" />
+    <Compile Include="Native\SystemName.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -50,6 +54,14 @@
       <Project>{9E256D0E-A06E-4442-8580-20539E3189EA}</Project>
       <Name>Unosquare.RaspberryIO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Native\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DhtDriver.so">
+      <LogicalName>DhtDriver.so</LogicalName>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="..\IoTSharp.Components.Core\IoTSharp.Components.Core.projitems" Label="Shared" Condition="Exists('..\IoTSharp.Components.Core\IoTSharp.Components.Core.projitems')" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
