@@ -240,6 +240,17 @@ A rotary encoder, also called a shaft encoder, is an electro-mechanical device t
 
 <img src="https://pandaelectronicsbd.com/wp-content/uploads/2017/07/sku_310402_2.jpg" height="100">
 
+### DhtSensor (DHT11/DHT22)
+
+The DHT11/22 is a basic, ultra low-cost digital temperature and humidity sensor. It uses a capacitive humidity sensor and a thermistor to measure the surrounding air, and spits out a digital signal on the data pin (no analog input pins needed). Its fairly simple to use, but requires careful timing to grab data. The only real downside of this sensor is you can only get new data from it once every 2 seconds, so when using our library, sensor readings can be up to 2 seconds old.
+
+<img src="https://github.com/netonjm/IoTSharp.Components/raw/master/images/comp-dht11.jpg" height="100">
+
+*Example Code:
+https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Examples.Core/DhtSensorExample.cs*
+
+[Schematic without resistor](https://github.com/netonjm/IoTSharp.Components/raw/master/images/setup-DHT11.png)
+[Schematic with resistor](https://github.com/netonjm/IoTSharp.Components/raw/master/images/setup-DHT11-resistor.png)
 
 ## Improving the current API
 
