@@ -16,11 +16,9 @@ namespace IoTSharp.Components
 		{
 			this.pinA = new IoTPin (pinA);
 			this.pinA.SetDirection (IoTPinDirection.DirectionIn);
-			this.pinA.SetActiveType (IoTActiveType.ActiveHigh);
 
 			this.pinB = new IoTPin (pinB);
 			this.pinB.SetDirection (IoTPinDirection.DirectionIn);
-			this.pinB.SetActiveType (IoTActiveType.ActiveHigh);
 		}
 
 		public override void OnUpdate ()

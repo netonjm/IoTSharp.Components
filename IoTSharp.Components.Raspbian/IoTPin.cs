@@ -21,22 +21,33 @@ namespace IoTSharp.Components
 			pin = connector.Pin();
 		}
 
+		public void PwmCreate(int value, int range)
+		{
+			pin.StartSoftPwm(value, range);
+		}
+
+		public void PwmWrite (int value) 
+		{
+			pin.SoftPwmValue = value;
+		}
+
 		public void SetDirection (IoTPinDirection direction)
 		{
 			switch (direction) {
 			case IoTPinDirection.DirectionOutInitiallyLow:
-			case IoTPinDirection.DirectionOutInitiallyHight:
 					pin.PinMode = GpioPinDriveMode.Output;
+				break;
+			case IoTPinDirection.DirectionOutInitiallyHigh:
+					pin.PinMode = GpioPinDriveMode.Output;
+					pin.Write (GpioPinValue.High);
 				break;
 			case IoTPinDirection.DirectionIn:
 					pin.PinMode = GpioPinDriveMode.Input;
 				break;
+			case IoTPinDirection.PwmOutput:
+					pin.PinMode = GpioPinDriveMode.PwmOutput;
+				break;
 			}
-		}
-
-		public void SetActiveType (IoTActiveType activeType)
-		{
-			//pin.SetActiveType (activeType.ToNative ());
 		}
 
 		public void Close ()

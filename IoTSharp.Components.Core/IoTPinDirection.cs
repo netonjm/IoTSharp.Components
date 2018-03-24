@@ -3,7 +3,8 @@
 	public enum IoTPinDirection
 	{
 		DirectionOutInitiallyLow,
-		DirectionOutInitiallyHight,
-		DirectionIn
+		DirectionOutInitiallyHigh,
+		DirectionIn, 
+		PwmOutput
 	}
 }

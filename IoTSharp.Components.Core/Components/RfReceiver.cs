@@ -13,7 +13,6 @@ namespace IoTSharp.Components
 		{
 			pin = new IoTPin (gpio);
 			pin.SetDirection (IoTPinDirection.DirectionIn);
-			pin.SetActiveType (IoTActiveType.ActiveLow);
 		}
 
 		public void Record (double recTime)

@@ -9,7 +9,6 @@
 		{
 			pin = new IoTPin (gpio);
 			pin.SetDirection (IoTPinDirection.DirectionOutInitiallyLow);
-			pin.SetActiveType (IoTActiveType.ActiveLow);
 		}
 
 		public void Load (string file)

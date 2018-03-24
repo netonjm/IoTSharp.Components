@@ -17,7 +17,6 @@ namespace IoTSharp.Components
 		{
 			pin = new IoTPin (gpio);
 			pin.SetDirection (IoTPinDirection.DirectionIn);
-			pin.SetActiveType (IoTActiveType.ActiveLow);
 			HasPresence = pin.Value;
 			tracer.Verbose ("Initial value: " + HasPresence);
 		}

@@ -39,6 +39,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Components\IoTHub.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IIoTHub.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IDhtSensor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ILed.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Components\Led.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)INativeTiming.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Env.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Components\" />

@@ -18,7 +18,6 @@ namespace IoTSharp.Components
 		{
 			pin = new IoTPin (gpio);
 			pin.SetDirection (IoTPinDirection.DirectionIn);
-			pin.SetActiveType (IoTActiveType.ActiveLow);
             IsPressed = false;
 			tracer.Verbose ("Initial value: " + IsPressed);
 		}

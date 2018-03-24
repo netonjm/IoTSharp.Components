@@ -31,10 +31,9 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Diagnostics.Tracer">
-      <HintPath>..\packages\System.Diagnostics.Tracer.2.0.8\lib\net45\System.Diagnostics.Tracer.dll</HintPath>
-    </Reference>
     <Reference Include="mscorlib" />
+    <PackageReference Include="Unosquare.Swan" Version="0.18.0" />
+    <PackageReference Include="System.Diagnostics.Tracer" Version="2.0.8" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -45,6 +44,7 @@
     <Compile Include="EmbeddedResources.cs" />
     <Compile Include="Native\Standard.cs" />
     <Compile Include="Native\SystemName.cs" />
+    <Compile Include="NativeTiming.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

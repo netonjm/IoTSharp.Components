@@ -7,7 +7,6 @@ namespace IoTSharp.Components
 		bool Value { get; set; }
 
 		void SetDirection (IoTPinDirection direction);
-		void SetActiveType (IoTActiveType activeType);
 		void Close ();
 	}
 }
