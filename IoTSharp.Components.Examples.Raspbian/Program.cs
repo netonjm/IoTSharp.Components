@@ -16,7 +16,8 @@ namespace IoTSharp.Components.Examples.Raspbian
 			//var example = new UltraSonicSensorExample ();
 			//var example = new HubExample ();
 			//var example = new DhtSensorExample ();
-			var example = new LedExample ();
+			//var example = new LedExample ();
+			var example = new BuzzerExample();
 		}
 	}
 }
