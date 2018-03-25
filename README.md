@@ -125,6 +125,7 @@ public class Program
 A total of 8 components are currently available, in addition to the IoT special base classes (marked in bold that we will explain later).
 
 - **[IoTComponent](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/IoTComponent.cs)**
+  - [Led](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/Led.cs)
   - [Button](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/Button.cs)
   - [ProximitySensor](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/ProximitySensor.cs)
   - [Relay](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/Relay.cs)
@@ -134,6 +135,17 @@ A total of 8 components are currently available, in addition to the IoT special 
   - [UltraSonicSensor](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/UltraSonicSensor.cs)
   - [SoundPlayer](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Raspbian/SoundPlayer.cs)
   - **[IoTHub](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/IoTHub.cs)**
+
+### Led with Brigthness
+
+a semiconductor diode that emits light when voltage is applied: used in electric lighting, alphanumeric displays, as on digital watches, etc. It also allows con
+
+<img src="https://github.com/netonjm/IoTSharp.Components/raw/master/images/comp-led.png" height="100">
+
+*Example Code:
+https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Examples.Core/LedExample.cs*
+
+[Schematic](https://github.com/netonjm/IoTSharp.Components/raw/master/images/setup-led.png)
 
 ### Button
 
@@ -251,6 +263,8 @@ https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.E
 
 [Schematic without resistor](https://github.com/netonjm/IoTSharp.Components/raw/master/images/setup-DHT11.png)
 [Schematic with resistor](https://github.com/netonjm/IoTSharp.Components/raw/master/images/setup-DHT11-resistor.png)
+
+
 
 ## Improving the current API
 
