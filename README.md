@@ -136,6 +136,7 @@ A total of 8 components are currently available, in addition to the IoT special 
   - [Buzzer](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/Buzzer.cs)
   - [LightSensor](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/LightSensor.cs)
   - [ServoMotor](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/ServoMotor.cs)
+  - [AdafruitNeoPixel](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Raspbian/AdafruitNeoPixel.cs)
   - [SoundPlayer](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Raspbian/SoundPlayer.cs)
   - **[IoTHub](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/IoTHub.cs)**
 
@@ -300,6 +301,18 @@ A servomotor is a rotary actuator or linear actuator that allows for precise con
 https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Examples.Core/ServoMotorExample.cs*
 
 [Schematic](https://github.com/netonjm/IoTSharp.Components/raw/master/images/setup-servomotor.png)
+
+### AdafruitNeoPixel
+
+LED matrix - 64 eye-blistering RGB LEDs adorn the NeoMatrix for a blast of configurable color. Arranged in an 8x8 matrix, each pixel is individually addressable. Only one microcontroller pin is required to control all the LEDs, and you get 24 bit color for each LED.
+
+<img src="https://github.com/netonjm/IoTSharp.Components/raw/master/images/comp-adafruit8.jpg" height="100">
+
+*Example Code:
+https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Examples.Raspbian/AdafruitNeoPixelExample.cs*
+
+[Schematic](https://github.com/netonjm/IoTSharp.Components/raw/master/images/setup-adafruit8.jpg)
+
 
 ### Sound Player
 
