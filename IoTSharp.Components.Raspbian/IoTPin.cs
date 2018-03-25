@@ -1,6 +1,4 @@
 ﻿using System;
-using Unosquare.RaspberryIO;
-using System.Linq;
 using Unosquare.RaspberryIO.Gpio;
 
 namespace IoTSharp.Components
