@@ -1,4 +1,4 @@
-﻿namespace IoTSharp.Components.Native
+﻿namespace IoTSharp.Native
 {
     using System;
     using System.Runtime.InteropServices;

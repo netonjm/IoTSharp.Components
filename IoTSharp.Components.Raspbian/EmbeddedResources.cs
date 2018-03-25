@@ -2,7 +2,7 @@
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Reflection;
-using IoTSharp.Components.Native;
+using IoTSharp.Native;
 
 namespace IoTSharp.Components
 {
