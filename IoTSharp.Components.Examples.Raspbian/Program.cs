@@ -19,7 +19,8 @@ namespace IoTSharp.Components.Examples.Raspbian
 			//var example = new LedExample ();
 			//var example = new BuzzerExample();
 			//var example = new LightSensorExample ();
-			var example = new ServoMotorExample ();
+			//var example = new ServoMotorExample ();
+			var example = new AdafruitNeoPixelExample();
 		}
 	}
 }

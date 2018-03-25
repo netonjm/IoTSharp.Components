@@ -8,6 +8,7 @@
     /// </summary>
     internal static class Standard
     {
+		internal const string UserLibDirectory = "/usr/lib";
         internal const string LibCLibrary = "libc";
 
         #region LibC Calls

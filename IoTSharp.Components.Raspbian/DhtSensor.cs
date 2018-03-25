@@ -1,6 +1,7 @@
 ﻿using System.Runtime.InteropServices;
 using System;
 using System.Threading.Tasks;
+using IoTSharp.Native;
 
 namespace IoTSharp.Components
 {
@@ -12,8 +13,7 @@ namespace IoTSharp.Components
 	public class DhtSensor : IoTComponent
 	{
 		const string DhtDriver = "DhtDriver.so";
-		const string UserLibDirectory = "/usr/lib";
-
+	
 		[DllImport(DhtDriver)]
 		static extern int pi_2_dht_read(int sensor, int pin, out float humidity, out float temperature);
 		static object obj = new object();
@@ -24,38 +24,31 @@ namespace IoTSharp.Components
 		const int DefaultDelay = 5000;
 
 		int Sensor; //DHT11
-		int GpioPin;
+		readonly int pin;
 
 		public int Humidity { get; private set; }
 		public int Temperature { get; private set; }
-
 		public bool IsRunning { get; private set; }
-
-		readonly public Connectors connector;
 
 		static DhtSensor ()
 		{
 			// Extraction of embedded resources
-			EmbeddedResources.Extract (DhtDriver, UserLibDirectory, executable:true);
+			EmbeddedResources.Extract (DhtDriver, Standard.UserLibDirectory, executable:true);
 		}
 
 		public DhtSensor (Connectors connector, DhtModel model) 
 		{
-			this.connector = connector;
+			pin = (int)connector;
 			Sensor = (int)model;
 		}
 
-		public void Start (int delay = DefaultDelay) 
+		public void Start () 
 		{
 			lock (obj) {
 				if (IsRunning) {
 					return;
 				}
-
 				IsRunning = true;
-
-				//TODO: Change using a robust way
-				GpioPin = int.Parse (connector.ToString ().Replace ("GPIO", ""));
 				Initialization = InitializeAsync(); 	
 			}
 		}
@@ -67,7 +60,7 @@ namespace IoTSharp.Components
 				try
 				{
 					float hum, temp;
-					pi_2_dht_read(Sensor, GpioPin, out hum, out temp);
+					pi_2_dht_read(Sensor, pin, out hum, out temp);
 
 					if (hum != 0) {
 						Humidity = (int)hum;

@@ -45,6 +45,8 @@
     <Compile Include="Native\Standard.cs" />
     <Compile Include="Native\SystemName.cs" />
     <Compile Include="NativeTiming.cs" />
+    <Compile Include="Native\Adafruit.cs" />
+    <Compile Include="AdafruitNeoPixel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -61,6 +63,9 @@
   <ItemGroup>
     <EmbeddedResource Include="DhtDriver.so">
       <LogicalName>DhtDriver.so</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ws2811.so">
+      <LogicalName>ws2811.so</LogicalName>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="..\IoTSharp.Components.Core\IoTSharp.Components.Core.projitems" Label="Shared" Condition="Exists('..\IoTSharp.Components.Core\IoTSharp.Components.Core.projitems')" />
