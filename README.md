@@ -133,6 +133,9 @@ A total of 8 components are currently available, in addition to the IoT special 
   - [RfTransmitter](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/RfTransmitter.cs)
   - [RotatoryEncoder3](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/RotaryEncoder3.cs)
   - [UltraSonicSensor](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/UltraSonicSensor.cs)
+  - [Buzzer](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/Buzzer.cs)
+  - [LightSensor](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/LightSensor.cs)
+  - [ServoMotor](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/ServoMotor.cs)
   - [SoundPlayer](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Raspbian/SoundPlayer.cs)
   - **[IoTHub](https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/IoTHub.cs)**
 
@@ -140,7 +143,7 @@ A total of 8 components are currently available, in addition to the IoT special 
 
 a semiconductor diode that emits light when voltage is applied: used in electric lighting, alphanumeric displays, as on digital watches, etc. It also allows con
 
-<img src="https://github.com/netonjm/IoTSharp.Components/raw/master/images/comp-led.png" height="100">
+<img src="https://github.com/netonjm/IoTSharp.Components/raw/master/images/comp-led.jpg" height="100">
 
 *Example Code:
 https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Examples.Core/LedExample.cs*
@@ -265,6 +268,45 @@ https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.E
 [Schematic with resistor](https://github.com/netonjm/IoTSharp.Components/raw/master/images/setup-DHT11-resistor.png)
 
 
+### Buzzer
+
+A buzzer or beeper is an audio signalling device,[1] which may be mechanical, electromechanical, or piezoelectric (piezo for short). Typical uses of buzzers and beepers include alarm devices, timers, and confirmation of user input such as a mouse click or keystroke.
+
+<img src="https://github.com/netonjm/IoTSharp.Components/raw/master/images/comp-buzzer.jpg" height="100">
+
+*Example Code:
+https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Examples.Core/BuzzerExample.cs*
+
+[Schematic](https://github.com/netonjm/IoTSharp.Components/raw/master/images/setup-buzzer.png)
+
+### Light Sensor (Photoresistor module)
+
+A photoresistor (or light-dependent resistor, LDR, or photo-conductive cell) is a light-controlled variable resistor. The resistance of a photoresistor decreases with increasing incident light intensity; in other words, it exhibits photoconductivity. A photoresistor can be applied in light-sensitive detector circuits, and light-activated and dark-activated switching circuits.
+
+<img src="https://github.com/netonjm/IoTSharp.Components/raw/master/images/comp-lightsensor.jpg" height="100">
+
+*Example Code:
+https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Examples.Core/LightSensorExample.cs*
+
+[Schematic](https://github.com/netonjm/IoTSharp.Components/raw/master/images/setup-lightsensor.png)
+
+### Servo Motor
+
+A servomotor is a rotary actuator or linear actuator that allows for precise control of angular or linear position, velocity and acceleration. It consists of a suitable motor coupled to a sensor for position feedback.
+
+<img src="https://github.com/netonjm/IoTSharp.Components/raw/master/images/comp-servomotor.jpg" height="100">
+
+*Example Code:
+https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Examples.Core/ServoMotorExample.cs*
+
+[Schematic](https://github.com/netonjm/IoTSharp.Components/raw/master/images/setup-servomotor.png)
+
+### Sound Player
+
+Media player (software), software that plays digital media (WAV)
+
+*Example Code:
+https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Examples.Raspbian/SoundPlayerExample.cs*
 
 ## Improving the current API
 
