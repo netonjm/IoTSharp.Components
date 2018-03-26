@@ -165,10 +165,10 @@ namespace IoTSharp.Native
 			[FieldOffset (3)]
 			public byte A;
 
-			[FieldOffset (2)]
+			[FieldOffset (1)]
 			public byte R;
 
-			[FieldOffset (1)]
+			[FieldOffset (2)]
 			public byte G;
 
 			[FieldOffset (0)]
