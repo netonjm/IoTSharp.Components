@@ -23,7 +23,7 @@ Nowadays there are many distributions available to download, but focusing in .Ne
 
 | OS                          | Runtime                   | Backend                |
 | --------------------------- | ------------------------- | ---------------------- |
-| Raspbian (Basada en Debian) | Mono/.Net Core            | [Raspbery.IO](https://unosquare.github.io/raspberryio/)            |
+| Raspbian (Based on Debian) | Mono/.Net Core            | [Raspbery.IO](https://unosquare.github.io/raspberryio/)            |
 | AndroidThings               | Mono                      | [Xamarin.Android.Things](https://developer.android.com/things/index.html) |
 | Windows 10 IoT              | Net Framework / .Net Core | Not implemented        |
 | Ubuntu Mate                 | Mono/.Net Core            | Not implemented        |
@@ -347,7 +347,7 @@ There are two methods to overwrite:
 
 - OnUpdate: It must include code that we want to repeat in each iteration of the general loop, such as status updates, variables, etc.
 
-**Note: The component are only added to the hierarchy if we add it using AddComponent in your IoTHab. If not this methods never be called**
+**Note: The component are only added to the hierarchy if we add it using AddComponent in your IoTHub. If not this methods never be called**
 
 https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Core/Components/IoTComponent.cs
 
