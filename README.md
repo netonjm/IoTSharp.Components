@@ -300,7 +300,7 @@ A servomotor is a rotary actuator or linear actuator that allows for precise con
 *Example Code:
 https://github.com/netonjm/IoTSharp.Components/blob/master/IoTSharp.Components.Examples.Core/ServoMotorExample.cs*
 
-[Schematic](https://github.com/netonjm/IoTSharp.Components/raw/master/images/setup-servomotor.png)
+[Schematic](https://github.com/netonjm/IoTSharp.Components/raw/master/images/setup-servomotor.jpg)
 
 ### AdafruitNeoPixel
 
