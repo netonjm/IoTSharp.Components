@@ -8,9 +8,9 @@ namespace IoTSharp.Components
 		internal GpioPin pin;
 
 		public bool Value {
-			get { return pin.Read(); }
+			get { return pin.Read (); }
 			set {
-				pin.Write(value);
+				pin.Write (value);
 			}
 		}
 
@@ -19,14 +19,29 @@ namespace IoTSharp.Components
 			pin = connector.Pin();
 		}
 
-		public void PwmCreate(int value, int range)
+		public void PwmCreate (int range, int initialValue = 0)
 		{
-			pin.StartSoftPwm(value, range);
+			pin.StartSoftPwm (initialValue, range);
 		}
 
-		public void PwmWrite (int value) 
+		public int PwmClock {
+			get => pin.PwmClockDivisor;
+			set {
+				pin.PwmClockDivisor = value;
+			}
+		}
+
+		public int PwmDutyCycle {
+			get => pin.SoftPwmValue;
+			set {
+				pin.SoftPwmValue = value;
+			}
+		}
+
+
+		public int PulseIn (bool state)
 		{
-			pin.SoftPwmValue = value;
+			return pin.PulseIn (state);
 		}
 
 		public void SetDirection (IoTPinDirection direction)

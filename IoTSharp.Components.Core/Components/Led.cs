@@ -12,12 +12,11 @@ namespace IoTSharp.Components
 			get => brightness;
 			set
 			{
-				if (value < 0 && value > range)
-				{
+				if (value < 0 && value > range) {
 					throw new IndexOutOfRangeException (brightness.ToString());
 				}
 				brightness = value;
-				pin.PwmWrite (value);
+				pin.PwmDutyCycle = value;
 			}
 		}
 
@@ -27,9 +26,9 @@ namespace IoTSharp.Components
 			set
 			{
 				if (!value) {
-					pin.PwmWrite (0);
+					pin.PwmDutyCycle = 0;
 				} else {
-					pin.PwmWrite (brightness);
+					pin.PwmDutyCycle = brightness;
 				}
 				enabled = value;
 			}
@@ -48,7 +47,7 @@ namespace IoTSharp.Components
 			this.range = range;
 			this.brightness = brightness;
 
-			pin.PwmCreate (!enabled ? 0 : brightness, range);
+			pin.PwmCreate (range, !enabled ? 0 : brightness);
 		}
 
 		public override void OnDispose()
