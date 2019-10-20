@@ -6,3 +6,4 @@ bin
 debug
 obj
 nuget.exe
+.vs
