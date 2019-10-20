@@ -47,6 +47,7 @@
     <Compile Include="NativeTiming.cs" />
     <Compile Include="Native\Adafruit.cs" />
     <Compile Include="AdafruitNeoPixel.cs" />
+    <Compile Include="Native\LedSpriteSheet.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

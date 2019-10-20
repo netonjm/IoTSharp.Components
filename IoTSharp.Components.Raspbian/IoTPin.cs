@@ -38,10 +38,9 @@ namespace IoTSharp.Components
 			}
 		}
 
-
 		public int PulseIn (bool state)
 		{
-			return pin.PulseIn (state);
+            return -1;
 		}
 
 		public void SetDirection (IoTPinDirection direction)

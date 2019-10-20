@@ -1,12 +1,36 @@
 ﻿using Unosquare.RaspberryIO;
 using Unosquare.RaspberryIO.Gpio;
 using System;
+using System.Drawing;
+using IoTSharp.Native;
 
 namespace IoTSharp.Components
 {
 	public static class Extensions
 	{
-		public static GpioPin Pin(this Connectors gpio)
+        public static int ToIntColor(this Color clr, int correction = 0)
+        {
+            int rgb = Math.Max(0, clr.G + correction);
+            rgb = (rgb << 8) + Math.Max(0, clr.R + correction);
+            rgb = (rgb << 8) + Math.Max(0, clr.B + correction);
+            return rgb;
+        }
+
+        public static Ws2811.Led[,] GetNeoPixelsFromBitmap(this Bitmap bitmap, int x, int y, int pixels = 8, int correction = -95)
+        {
+            Ws2811.Led[,] result = new Ws2811.Led[pixels, pixels];
+            for (int i = x; i < pixels + x; i++)
+            {
+                for (int j = y; j < pixels + y; j++)
+                {
+                    Color clr = bitmap.GetPixel(i, j);
+                    result[i - x, j - y] = new Ws2811.Led { Color = clr.ToIntColor(correction) };
+                }
+            }
+            return result;
+        }
+
+        public static GpioPin Pin(this Connectors gpio)
 		{
 			switch (gpio)
 			{

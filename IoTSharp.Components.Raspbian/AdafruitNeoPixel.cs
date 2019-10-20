@@ -7,10 +7,10 @@ namespace IoTSharp.Components
 {
 	public class NeoPixel : IoTComponent
 	{
-		public int WIDTH { get; set; }
-		public int HEIGHT { get; set; }
+        public int Width => Matrix.GetLength(0);
+        public int Height => Matrix.GetLength(1);
 
-		public readonly Ws2811.Led [,] Matrix;
+        public readonly Ws2811.Led [,] Matrix;
 		readonly Ws2811 _ws2811;
 
 		CancellationTokenSource cancellationToken;
@@ -18,9 +18,6 @@ namespace IoTSharp.Components
 
 		public NeoPixel (Connectors connector, int width, int height)
 		{
-			WIDTH = width;
-			HEIGHT = height;
-
 			Matrix = new Ws2811.Led [width, height];
 			_ws2811 = new Ws2811 (width * height, (int) connector);
 		}
@@ -35,7 +32,7 @@ namespace IoTSharp.Components
 				while (!cancellationToken.IsCancellationRequested) {
 					updateHandler?.Invoke (this, EventArgs.Empty);
 					Render ();
-					_ws2811.Render ();
+
 					Thread.Sleep (delay);
 				}
 				processingCompletion.TrySetResult (null);
@@ -48,15 +45,16 @@ namespace IoTSharp.Components
 			processingCompletion?.Task.Wait ();
 		}
 
-		void Render ()
+		public void Render ()
 		{
 			int x, y;
-			for (x = 0; x < WIDTH; x++) {
-				for (y = 0; y < HEIGHT; y++) {
-					_ws2811.Channel1 [(y * WIDTH) + x] = Matrix [x, y];
+			for (x = 0; x < Width; x++) {
+				for (y = 0; y < Height; y++) {
+					_ws2811.Channel1 [(y * Width) + x] = Matrix [x, y];
 				}
 			}
-		}
+            _ws2811.Render();
+        }
 
 		public override void OnDispose ()
 		{
