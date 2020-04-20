@@ -3,7 +3,8 @@ using System.Threading;
 
 namespace IoTSharp.Components.Examples
 {
-	public class ButtonExample
+
+    public class ButtonExample
 	{
 		const int max = 2;
 		int count;

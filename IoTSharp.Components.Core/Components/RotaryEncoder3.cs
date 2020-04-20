@@ -4,40 +4,44 @@ namespace IoTSharp.Components
 {
 	public class RotaryEncoder3 : IoTComponent, IRotaryEncoder3
 	{
-		public long value;
-		public int lastEncoded;
+		bool clkLastState;
 
-		readonly IoTPin pinA;
-		readonly IoTPin pinB;
+		readonly IoTPin clockPin;
+		readonly IoTPin dtPin;
 
 		public long Value { get; private set; }
 
-		public RotaryEncoder3 (Connectors pinA, Connectors pinB)
+		public RotaryEncoder3 (Connectors clockConnector, Connectors dtConnector)
 		{
-			this.pinA = new IoTPin (pinA);
-			this.pinA.SetDirection (IoTPinDirection.DirectionIn);
+			this.clockPin = new IoTPin (clockConnector);
+			this.clockPin.SetDirection (IoTPinDirection.DirectionIn);
 
-			this.pinB = new IoTPin (pinB);
-			this.pinB.SetDirection (IoTPinDirection.DirectionIn);
+			this.dtPin = new IoTPin (dtConnector);
+			this.dtPin.SetDirection (IoTPinDirection.DirectionIn);
+			Value = 0;
+			clkLastState = this.clockPin.Value;
 		}
 
 		public override void OnUpdate ()
 		{
-			int MSB = Convert.ToInt32 (pinA.Value);
-			int LSB = Convert.ToInt32 (pinB.Value);
-			int encoded = (MSB << 1) | LSB;
-			int sum = (lastEncoded << 2) | encoded;
 
-			if (sum == 0b1101 || sum == 0b0100 || sum == 0b0010 || sum == 0b1011) Value++;
-			if (sum == 0b1110 || sum == 0b0111 || sum == 0b0001 || sum == 0b1000) Value--;
+			var clkState = clockPin.Value;
+		    var dtState =  dtPin.Value;
+			if (clkState != clkLastState) {
+				if (dtState != clkState)
+					Value += 1;
+				else
+					Value -= 1;
+				Console.WriteLine(Value);
+			}
 
-			lastEncoded = encoded;
+			clkLastState = clkState;
 		}
 
 		public override void OnDispose ()
 		{
-			pinA.Dispose ();
-			pinB.Dispose ();
+			clockPin.Dispose ();
+			dtPin.Dispose ();
 			base.OnDispose ();
 		}
 	}

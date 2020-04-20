@@ -21,5 +21,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)BuzzerExample.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ServoMotorExample.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)LightSensorExample.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RotatoryEncoderExample.cs" />
   </ItemGroup>
 </Project>
